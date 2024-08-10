@@ -1,0 +1,9 @@
+npx create-expo-app base-rn --template
+
+pnpm create expo-app base-rn --template
+
+yarn create expo-app base-rn --template
+
+expo init exercicio-stylesheet
+
+choose Bare
