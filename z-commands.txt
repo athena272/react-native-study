@@ -7,3 +7,7 @@ yarn create expo-app base-rn --template
 expo init exercicio-stylesheet
 
 choose Bare
+
+pnpm add @react-navigation/native
+
+npx expo install react-native-screens react-native-safe-area-context
