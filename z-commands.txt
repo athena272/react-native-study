@@ -10,4 +10,6 @@ choose Bare
 
 pnpm add @react-navigation/native
 
+pnpm add @react-navigation/bottom-tabs
+
 npx expo install react-native-screens react-native-safe-area-context
