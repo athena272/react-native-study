@@ -45,6 +45,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   scrollContainer: {
-    paddingBottom: 20, // Adicionado para dar um espaçamento no final da rolagem
+    paddingBottom: 30, // Adicionado para dar um espaçamento no final da rolagem
   }
 });
