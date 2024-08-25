@@ -4,8 +4,6 @@ import { Ionicons } from "@expo/vector-icons";
 import Home from "../Pages/Home";
 import Settings from "../Pages/Settings";
 
-type IconName = "home" | "menuunfold"
-
 const Tab = createBottomTabNavigator();
 
 export default function Routes() {
@@ -14,12 +12,12 @@ export default function Routes() {
             <Tab.Navigator
                 screenOptions={({ route }) => ({
                     tabBarIcon: ({ color, size }) => {
-                        let iconName: IconName; // valor padrão ou ícone de fallback
+                        let iconName;
 
                         if (route.name === "Home") {
                             iconName = "home";
                         } else if (route.name === "Settings") {
-                            iconName = "menuunfold";
+                            iconName = "settings";
                         }
 
                         return <Ionicons name={iconName} size={size} color={color} />;
@@ -27,10 +25,11 @@ export default function Routes() {
                     headerShown: false,
                     tabBarActiveTintColor: '#FF0044',
                     tabBarInactiveTintColor: '#BBB',
+                    tabBarShowLabel: false,
                 })}
             >
                 <Tab.Screen name="Home" component={Home} />
-                <Tab.Screen name="Setting" component={Settings} />
+                <Tab.Screen name="Settings" component={Settings} />
             </Tab.Navigator>
         </NavigationContainer>
     );
