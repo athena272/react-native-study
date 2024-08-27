@@ -1,6 +1,8 @@
 import { useNavigation } from "@react-navigation/native";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import NavButton from "../../components/NavButton";
+import Container from "../../components/Container";
+import Title from "../../components/Title";
 
 export default function ScrollViewScreen() {
     const navigation = useNavigation()
@@ -10,9 +12,9 @@ export default function ScrollViewScreen() {
     }
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>ScrollView</Text>
-            <NavButton text='Voltar'  onPress={navigateBack}/>
+        <Container>
+            <Title text="ScrollView" />
+            <NavButton text='Voltar' onPress={navigateBack} />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Text style={styles.item}>
                     1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
@@ -63,21 +65,11 @@ export default function ScrollViewScreen() {
                     aliquam.
                 </Text>
             </ScrollView>
-        </View>
+        </Container>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        paddingHorizontal: 16,
-        marginHorizontal: 3,
-        marginVertical: 32
-    },
-    title: {
-        fontSize: 40,
-        color: '#f64348'
-    },
     item: {
         fontSize: 16,
         marginTop: 16
