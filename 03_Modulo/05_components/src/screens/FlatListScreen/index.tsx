@@ -1,6 +1,8 @@
 import { useNavigation } from "@react-navigation/native"
 import { FlatList, StyleSheet, Text, View } from "react-native"
 import NavButton from "../../components/NavButton"
+import Container from "../../components/Container"
+import Title from "../../components/Title"
 
 type Movie = {
     id: number,
@@ -41,29 +43,19 @@ export default function FlatListScreen() {
     )
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>FlatList</Text>
-            <NavButton text='Voltar'  onPress={navigateBack}/>
+        <Container>
+            <Title text="Flatlist" />
+            <NavButton text='Voltar' onPress={navigateBack} />
             <FlatList
                 data={movies}
                 renderItem={renderMovie}
                 keyExtractor={(item) => item.id.toString()}
             />
-        </View>
+        </Container>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        paddingHorizontal: 16,
-        marginHorizontal: 3,
-        marginVertical: 32
-    },
-    title: {
-        fontSize: 40,
-        color: '#f64348'
-    },
     list: {
         marginTop: 40,
         marginHorizontal: 10,
