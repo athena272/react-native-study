@@ -1,6 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, StyleSheet } from "react-native";
 import NavButton from "../../components/NavButton";
+import Container from "../../components/Container";
+import Title from "../../components/Title";
 
 export default function NavigationScreen() {
     const navigation = useNavigation()
@@ -10,17 +11,9 @@ export default function NavigationScreen() {
     }
 
     return (
-        <View style={styles.container}>
-            <Text>Aula de Navegação</Text>
+        <Container>
+            <Title text="Aula de Navegação"/>
             <NavButton text='Voltar'  onPress={navigateBack}/>
-        </View>
+        </Container>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    }
-});
