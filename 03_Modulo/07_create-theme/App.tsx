@@ -21,7 +21,6 @@ SplashScreen.preventAutoHideAsync()
 
 export default function App() {
   const [fontsLoaded] = useFonts({ roboto: Roboto_700Bold })
-  console.log("🚀 ~ App ~ fontsLoaded:", fontsLoaded)
 
   // esconde a SplashScreen assim que fontsLoaded for modificado,
   // ou seja, quando a fonte for carregada
