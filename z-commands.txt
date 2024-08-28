@@ -13,3 +13,7 @@ pnpm add @react-navigation/native
 pnpm add @react-navigation/bottom-tabs
 
 npx expo install react-native-screens react-native-safe-area-context
+
+npx expo install expo-font @expo-google-fonts/roboto
+
+npx expo install expo-splash-screen

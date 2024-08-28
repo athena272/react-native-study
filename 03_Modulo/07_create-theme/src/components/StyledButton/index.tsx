@@ -2,11 +2,11 @@ import styled from "styled-components/native";
 import { TouchableOpacityProps, TextProps } from "react-native";
 
 interface BackgroundProps extends TouchableOpacityProps {
-    color: string;
+    color?: string
 }
 
 interface TextoProps extends TextProps {
-    color: string;
+    color?: string
 }
 
 type StyledButtonProps = {
@@ -17,14 +17,14 @@ type StyledButtonProps = {
 }
 
 const Background = styled.TouchableOpacity<BackgroundProps>`
-  background-color: ${({ color }) => color ?? '#1c1a1d'};
+  background-color: ${({ theme, color }) => color ?? theme.colors.dark};
   border-radius: 10px;
   margin: 10px 0;
   padding: 10px;
 `
 
 const Text = styled.Text<TextoProps>`
-  color: ${({ color }) => color ?? '#fff'};
+  color: ${({ theme, color }) => color ?? theme.colors.light};
 `
 
 export default function StyledButton({ bgColor, color, onPress, children }: StyledButtonProps) {

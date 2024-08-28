@@ -11,8 +11,8 @@ export default function StyledComponentsScreen() {
     }
 
     return (
-        <StyledContainer color="#f64348">
-            <StyledTitle color="#1c1a1d">Styled Components</StyledTitle>
+        <StyledContainer>
+            <StyledTitle>Styled Components</StyledTitle>
             <StyledButton bgColor="#fff" color="#1c1a1d" onPress={navigateBack}>
                 Voltar
             </StyledButton>

@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { RootStackParamList } from '../../types/RootStackParamList';
 import NavButton from '../../components/NavButton';
 import Container from '../../components/Container';
-import Title from '../../components/Title';
+import StyledTitle from '../../components/StyledTitle';
 
 export default function HomeScreen() {
     // Tipar o useNavigation com o tipo correto
@@ -27,12 +27,12 @@ export default function HomeScreen() {
 
     return (
         <Container>
-            <Title text="Olá, mundo!" />
+            <StyledTitle>Olá, mundo!</StyledTitle>
             <StatusBar style="auto" />
-            <NavButton text='Aula de Navegação' onPress={navigateToNavigationScreen}/>
-            <NavButton text='Aula de ScrollView' onPress={navigateToScrollViewScreen}/>
-            <NavButton text='Aula de FlatList' onPress={navigateToFlatListScreen}/>
-            <NavButton text='Aula de Styled Components' onPress={naviateToStyledComponentsScreen}/>
+            <NavButton text='Aula de Navegação' onPress={navigateToNavigationScreen} />
+            <NavButton text='Aula de ScrollView' onPress={navigateToScrollViewScreen} />
+            <NavButton text='Aula de FlatList' onPress={navigateToFlatListScreen} />
+            <NavButton text='Aula de Styled Components' onPress={naviateToStyledComponentsScreen} />
         </Container>
     )
 }
