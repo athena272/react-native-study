@@ -25,6 +25,10 @@ export default function HomeScreen() {
         navigation.navigate('Styled')
     }
 
+    const navigateToApiScreen = () => {
+        navigation.navigate('ApisScreen')
+    }
+
     return (
         <Container>
             <StyledTitle>Olá, mundo!</StyledTitle>
@@ -33,6 +37,7 @@ export default function HomeScreen() {
             <NavButton text='Aula de ScrollView' onPress={navigateToScrollViewScreen} />
             <NavButton text='Aula de FlatList' onPress={navigateToFlatListScreen} />
             <NavButton text='Aula de Styled Components' onPress={naviateToStyledComponentsScreen} />
+            <NavButton text='Aula de Consumo de APIs' onPress={navigateToApiScreen} />
         </Container>
     )
 }
