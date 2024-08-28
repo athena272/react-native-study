@@ -10,8 +10,8 @@ interface TextoProps extends TextProps {
 }
 
 type StyledButtonProps = {
-    bgColor: string
-    color: string
+    bgColor?: string
+    color?: string
     onPress: () => void
     children: React.ReactNode
 }
