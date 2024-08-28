@@ -21,6 +21,10 @@ export default function HomeScreen() {
         navigation.navigate('FlatList')
     }
 
+    const naviateToStyledComponentsScreen = () => {
+        navigation.navigate('Styled')
+    }
+
     return (
         <Container>
             <Title text="Olá, mundo!" />
@@ -28,6 +32,7 @@ export default function HomeScreen() {
             <NavButton text='Aula de Navegação' onPress={navigateToNavigationScreen}/>
             <NavButton text='Aula de ScrollView' onPress={navigateToScrollViewScreen}/>
             <NavButton text='Aula de FlatList' onPress={navigateToFlatListScreen}/>
+            <NavButton text='Aula de Styled Components' onPress={naviateToStyledComponentsScreen}/>
         </Container>
     )
 }
