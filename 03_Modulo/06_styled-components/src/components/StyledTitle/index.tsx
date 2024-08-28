@@ -1,6 +1,11 @@
 import styled from "styled-components/native";
+import { TextProps } from 'react-native';
 
-export default styled.Text`
+interface StyledTitle extends TextProps {
+    color?: string;
+}
+
+export default styled.Text<StyledTitle>`
     font-size: 40px;
-    color: #f64348;
+    color: ${(props) => props.color ?? '#f64348'};
 `
