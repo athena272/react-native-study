@@ -26,20 +26,39 @@ export default function App() {
   }
 
   const renderPost = ({ item }: Item) => (
-    <View>
+    <View style={styles.postContainer}>
       <Text>ID: {item.id}</Text>
-      <Text>Título: {item.title}</Text>
-      <Text>Conteúdo: {item.body}</Text>
+      <Text style={styles.textTitle}>Título: {item.title}</Text>
+      <Text style={styles.textContent}>Conteúdo: {item.body}</Text>
     </View>
   );
 
   return (
-    <FlatList
-      data={posts}
-      renderItem={renderPost}
-      keyExtractor={(item) => item.id.toString()}
-    />
+    <View style={{ marginTop: 30 }}>
+      <FlatList
+        data={posts}
+        renderItem={renderPost}
+        keyExtractor={(item) => item.id.toString()}
+      />
+    </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  postContainer: {
+    borderWidth: 1,
+    borderColor: "#BBBB",
+    borderRadius: 5,
+    margin: 10,
+    padding: 16,
+  },
+  textTitle: {
+    marginVertical: 8,
+    fontWeight: "bold",
+    fontSize: 18,
+  },
+  textContent: {
+    fontWeight: "300",
+    fontSize: 14,
+  },
+});
