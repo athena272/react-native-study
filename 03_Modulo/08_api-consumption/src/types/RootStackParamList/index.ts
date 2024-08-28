@@ -5,4 +5,5 @@ export type RootStackParamList = {
     ScrollView: undefined
     FlatList: undefined
     Styled: undefined
+    ApisScreen: undefined
 };
