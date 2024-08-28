@@ -3,8 +3,8 @@ import StyledTitle from "../../components/StyledTitle";
 
 export default function StyledComponentsScreen() {
     return (
-        <StyledContainer>
-            <StyledTitle>Styled Components</StyledTitle>
+        <StyledContainer color="#f64348">
+            <StyledTitle color="#1c1a1d">Styled Components</StyledTitle>
         </StyledContainer>
     )
 }
