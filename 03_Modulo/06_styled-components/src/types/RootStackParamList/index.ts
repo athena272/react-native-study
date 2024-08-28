@@ -4,4 +4,5 @@ export type RootStackParamList = {
     Navigation: undefined
     ScrollView: undefined
     FlatList: undefined
+    Styled: undefined
 };
